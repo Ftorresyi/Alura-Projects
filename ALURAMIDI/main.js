@@ -1,7 +1,16 @@
-//alert("Ola Mundo!");
 
-function tocaSom(idElementoAuido){
-    document.querySelector(idElementoAuido).play();
+function tocaSom(seletorAudio){
+    elemento = document.querySelector(seletorAudio);
+    if (elemento === null){
+        alert('elemento nao encontrado');
+    }
+    if (elemento != null) {
+        //console.log(elemento.localName === 'audio'); //ao fazer o deploy e executar essa função no console do navegador é possível descobrir as propriedades e funcionalidades JS de elemento que serão impressoss
+        if (elemento.localName === 'audio') {
+            elemento.play();
+        }
+        
+    }
 }
 //tocaSomPom deve ser sem parenteses para ser guardada sua referencia, caso contrario sera exutado antes de ser clicado
 //document.querySelector('.tecla_pom').onclick = tocaSom;
