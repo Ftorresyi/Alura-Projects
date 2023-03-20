@@ -65,4 +65,15 @@ Como foi resolvido a adição da classe ativa a partir do clique da tecla Enter 
 essa classe logo após deixamos de pressionar a tecla. Para isso, você precisa adicionar na tecla o evento de 
 onkeyup (quando o usuário solta a tecla) uma função anônima, e dentro do escopo desta função, 
 vamos remover a classe ativa da classe, ficando assim: tecla.classList.remove(‘ativa’);
+
+Criamos uma função que reproduz o som dos instrumentos musicais que estão armazenados dentro de um elemento áudio do HTML 
+e fizemos com que esses sons que foram reproduzidos lá na nossa interface gráfica, o Alura Midi, a nossa aplicação Aura Midi, 
+fosse controlado pelos botões que desenhamos com HTML e CSS, que estavam prontos já e apenas fizemos que os nossos botões funcionassem 
+e reproduzissem o som do instrumento que desejarmos.
+
+Então agora, por exemplo, se eu clicar em uma tecla do nosso Alura Midi vai reproduzir um som. Assim como a navegação via teclado, 
+se eu apertar “Enter” também reproduz o som daquela tecla ou a tecla de barra de espaço.
+
+Aprendemos no nosso código como fazemos para fazer um código otimizado que percorre por todos os botões, reduzindo repetição de código 
+e fazendo aumentar o reaproveitamento e a manutenção desse código.
 */
