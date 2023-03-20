@@ -45,7 +45,6 @@ for (let i = 0; i < listaDeTeclas.length; i++){
 
 
 
-
 /*
 PASSO A PASSO EVENTO ONCLICK DO MOUSE:
 O primeiro passo é criar uma referência (const listaDeTeclas) para poder receber a lista com todas as teclas do Alura Fone, 
