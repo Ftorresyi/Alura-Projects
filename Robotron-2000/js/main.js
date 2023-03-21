@@ -1,14 +1,15 @@
 
 const subtrair = document.querySelector('#subtrair')
 const somar = document.querySelector('#somar')
-const braco = document.querySelector('#braco')
+
 
 const controle = document.querySelectorAll('.controle-ajuste')
 
 //Adiciona evendo ManipulaDados quando ocorrer o evento click em todos elementos da classe controle-ajuste
 controle.forEach((elemento) => {
     elemento.addEventListener('click', (evento)=>{
-        manipulaDados(evento.target.textContent)
+        manipulaDados(evento.target.textContent, evento.target.parentNode)//manipula o conteudo do texto da target
+        //console.log(evento.target.parentNode)//encontra o elemento pai na herança, o qual iremos referenciar
     })
     
 })
@@ -16,11 +17,13 @@ controle.forEach((elemento) => {
 // somar.addEventListener("click", (evento) => {manipulaDados('somar')} )
 // subtrair.addEventListener("click", (evento) => {manipulaDados('subtrair')})
 
-function manipulaDados(operacao){
+//Essa funcao adiona ou subtrai elementos que forem pecas, atraves da classe .controle-contador que elas herdarem.
+function manipulaDados(operacao, controle){
+    const peca = controle.querySelector('.controle-contador')
     if(operacao === '-'){
-        braco.value = parseInt(braco.value) -1; //o valor do braço deve ser transformado para inteiro, pois é uma string (00)
+        peca.value = parseInt(peca.value) -1; //o valor do braço deve ser transformado para inteiro, pois é uma string (00)
     }else{
-        braco.value = parseInt(braco.value) +1;
+        peca.value = parseInt(peca.value) +1;
     } 
 }
 
