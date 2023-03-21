@@ -5,6 +5,7 @@ const braco = document.querySelector('#braco')
 
 const controle = document.querySelectorAll('.controle-ajuste')
 
+//Adiciona evendo ManipulaDados quando ocorrer o evento click em todos elementos da classe controle-ajuste
 controle.forEach((elemento) => {
     elemento.addEventListener('click', (evento)=>{
         manipulaDados(evento.target.textContent)
